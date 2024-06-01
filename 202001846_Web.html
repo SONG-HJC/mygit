@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+
+            hr{
+                margin-left: 30px;
+                margin-right: 30px;
+                margin-bottom: 0px;
+            }
+
+            .header {
+                position : fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 6vh;
+                background: rgb(37, 36, 36);
+            }    
+
+            .header nav {
+                display: flex;
+                justify-content: center;
+            }
+
+            .header ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+            }
+
+            .header li {
+                margin: 0 20px;
+            }
+
+            .header a {
+                text-decoration: none;
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+            }
+
+            .header a:hover {
+                text-decoration: underline;
+            }
+
+            section{
+                margin-top : 7vh;
+                width : 100%;
+                height : 92vh;
+            }
+
+            .firstdiv{
+                margin-top : 5px;
+                width : 100%;
+                height : 33%;
+
+            }
+
+            .firstbutton{
+                display: flex;
+                height: 100%;
+                width: 100%;
+                background-color: white;
+                border:1px solid black;
+                border-radius: 50px;
+                justify-content: center;
+                align-items: center;
+            }
+            .firstbutton:hover{
+                border: 3px solid black;
+            }
+            .inline{
+                margin-left:5%;
+                width: 43%;
+                float: left;
+                text-align: center;
+            }
+
+            .Corporation{
+                text-decoration: none;
+                color: black;
+                font-size: 40px;
+            }
+
+            .Corporation:hover {
+                text-decoration: underline;
+            }
+
+            .plan {
+                padding: 20px;
+                border-radius: 5px;
+                width : 400px;
+            }
+
+            .plan h2{
+                background-color: darkgray;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .plan ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            .plan ul li {
+                background-color: aliceblue;
+                border : 1px solid black;
+                text-align: center;
+                padding: 5px 0;
+            }
+
+        </style>
+        <script>
+            function loadintroduce() {
+                var newsection = document.getElementsByTagName('section');
+                for(var i = 0; i<newsection.length; i++) {
+                    newsection[i].innerHTML = `
+                    <div style = "display : flex; justify-content: center; align-items: center;">
+                    <div style = "display : inline-block; width : 400px; height : 250px;"><h1 style = "margin-left : 10px; margin-bottom : 10px; font-size : 70px;">황정철</h1>
+                        <p style = "font-size : 20px; font-weight : 500">소속 : 공주대학교 소프트웨어학과</p>
+                        <p style = "font-size : 20px; font-weight : 500">이메일 : wjdcjf0304@naver.com</p>
+                        </div>
+                        <div style = "display : inline-block; margin-left : 30px; width : 1000px; height : 500px;">
+                        <canvas id = "myCanvas" width="1000" height="500"></canvas></div>
+                        </div>
+                        <br>
+                        <hr>
+                        <div style="margin-left : 30px;">
+                            <p style="font-size : 30px">과제의 주제를 선정한 이유</p>
+                            <p style="font-size : 20px">저는 과제를 하기 위해서 가장 먼저 제가 원하는 진로에 대해서 깊게 조사해보는것이 좋겠다라는 생각이 들게 되었습니다.</p>
+                            <p style="font-size : 20px">그러한 활동을 하면서 저는 제가 아직까지 부족한 점과 이를 보충하기 위해서 무엇을 해야할지 알게되었습니다.</p>
+                            <p style="font-size : 20px">그래서 저는 이를 주제로 선정하는 것이 좋겠다라는 생각이 들게되어 이를 주제로 선정하게 되었습니다.</p>
+                        </div>
+                        <hr>
+                        <div style="margin-left : 30px;">
+                            <p style="font-size : 30px">이루고 싶은 목표</p>
+                            <p style="font-size : 20px">궁극적인 목표로는 해외 대형 정보 보안 업계 취업입니다.</p>
+                            <p style="font-size : 20px">그렇게 하기 위해서 우선 국내 정보 보안 업계에 취업하고 싶습니다.</p>
+                            <p style="font-size : 20px">그렇기 때문에 저는 정보처리기사, 정보보안기사 등의 여러 자격증을 취득하는것을 목표로 하고 있습니다.</p>
+                        </div>
+                        <hr>
+                        <div style="margin-left : 30px;">
+                            <p style="font-size : 30px">내가 자라온 과정</p>
+                            <p style="font-size : 20px">처음에 제 장래희망은 파일럿이였습니다.</p>
+                            <p style="font-size : 20px">그러다가 초등학교 6학년 담임 선생님의 추천으로 정보 올림피아드 대회에 나가게 되었습니다.</p>
+                            <p style="font-size : 20px">그 대회에서 좋은 성적을 거두게 되었으며, 배우면서 큰 흥미를 느껴 진로를 이쪽으로 결정하게 되었습니다.</p>
+                            <br>
+                            <p style="font-size : 20px">그렇게 대학에 진학하여 대학생활을 하던 중 특강으로 교내에서 안랩 내부 인터뷰를 실시간으로 보게 되었습니다.</p>
+                            <p style="font-size : 20px">그 때 직장 만족도 및 회사의 복지, 회사에서 하는 일들에 관해 설명을 들었을 때 저런 일을 해보고 싶고, 가보고 싶다라는 생각이 들게 되었습니다.</p>
+                            <p style="font-size : 20px">그 후 입대를 하여 훈련소에서 같은 생활관을 사용했던 사람 중 IT업계 회사에서 일을 하다가 군대를 온 사람이 있었습니다.</p>
+                            <p style="font-size : 20px">그 사람에게 진로에 관해 상담을 하고 여러가지 대화를 하다보니, 정보 보안쪽으로 진로를 정하게 되었습니다.</p>
+                        </div>
+                        <hr>
+                        <div style="margin-left : 30px;">
+                            <p style="font-size : 30px">최근 사회 이슈와 나의 견해</p>
+                            <p style="font-size : 20px">최근 결혼을 하는 인원이 감소하고, 결혼을 하더라도 아이를 낳지 않는 경우가 증가해 한국의 출산율이 많이 떨어진다고 합니다.</p>
+                            <p style="font-size : 20px">이로 인해서 여러 부분에서 인력이 많이 부족하다고 하는데, 물론 좋지 않은 소식이고 대한민국이라는 나라를 유지할 수 있는 출산율로 복귀해야한다고 생각합니다.</p>
+                            <p style="font-size : 20px">하지만 오히려 여러부분에서 인력이 부족한 이 때를 노려, 자신을 어필할 수 있는 수단을 갈고 닦아 여러 회사에 필요한 뛰어난 인재가 되어 안정적 일자리를 가지는 것 또한 하나의 방법이라 생각합니다.</p>
+                        </div>
+                        <hr>
+                        <div style="margin-left : 30px;">
+                        <p style="font-size : 30px">프로젝트 중 어려운 부분과 해결방안</p>
+                        <p style="font-size : 20px">프로젝트를 처음 시작 할 때는 우선 만들고 싶은 웹 페이지를 그림을 그려보았습니다.</p>
+                        <p style="font-size : 20px">그러다가 html파일을 작성하게 된 후 그렸던 그림에 있던 것을 그대로 구현하기엔 문제가 있다는 것을 알게 되었습니다.</p>
+                        <p style="font-size : 20px">그 문제란 바로 강의 시간동안 배웠던 내용으로는 구현하지 못하는 것들이 있었기 때문입니다.</p>
+                        <br>
+                        <p style="font-size : 20px">그렇기 때문에 여러가지 생각을 해보게 되었습니다.</p>
+                        <p style="font-size : 20px">처음에 했었던 생각은 다른 스타일을 생각해 보는 것이었습니다.</p>
+                        <p style="font-size : 20px">하지만 원래 원했었던 스타일 그대로 가고싶다라는 생각이 너무 강하였습니다.</p>
+                        <p style="font-size : 20px">그래서 저는 인터넷에 검색을 통하여 이것이 구현 가능한지 알아보았습니다.</p>
+                        <p style="font-size : 20px">그 후 알아낸 구현하는 방법을 적용시켜 해결하게 되었습니다.</p>
+                        </div>
+                        <hr>
+                        <div style="margin-left : 30px;">
+                        <p style="font-size : 30px">내가 할 수 있는것</p>
+                        <p style="font-size : 20px">저는 공주대학교에서 2년 그리고 이번학기를 공부하면서 여러가지를 배웠습니다.</p>
+                        <p style="font-size : 20px">그래서 제가 할 수 있는 것에는 여러가지가 있는데, 그것들의 종류에는</p>
+                        <ol style = "font-size : 15px">
+                            <li>모바일 앱 제작</li>
+                            <li>웹 프로그래밍</li>
+                            <li>데이터베이스 설계</li>
+                            <li>C, Python, Java를 이용한 프로그래밍</li>
+                        </ol>
+                        <p style="font-size : 20px">등이 있습니다.</p>
+                        </div>
+                        <br>
+                    `;
+                    }            
+                var canvas = document.getElementById("myCanvas");
+                var context = canvas.getContext("2d");
+                var img = new Image();
+                img.onload = function() {
+                    context.drawImage(img, 0, 0, canvas.width, canvas.height);
+                }
+                img.src = "https://s3.ap-northeast-2.amazonaws.com/blog.spartacodingclub.kr/210817_1.png";
+            }
+
+            function loadinterested() {
+                var newsection = document.getElementsByTagName('section');
+                for(var i = 0; i<newsection.length; i++) {
+                    newsection[i].innerHTML = `
+                    <div style = "text-align : center">
+                    <div style = "width : 900px; text-align : center; display : inline-block; vertical-align: top;" >
+                        <div style = "text-align : center;">
+                            <h1 style = "font-size : 60px">관심 기술</h1>
+                        </div>
+                        <div style = "height : 255px">
+                            <canvas id = "SkillCanvas1" style = "display : inline-block; border-radius: 20px; vertical-align: top;" width = "250" height = "250"></canvas>
+                            <div style = "border : 1px solid black; width : 600px; height : 250px; display : inline-block; border-radius: 20px; vertical-align: top;">
+                                <br>
+                                <a style = "font-size : 40px";>VPN, 악성코드, 백신</a>
+                                <p style = "font-size : 30px";>보안 관련 기업 취업을 목표로 하고 있기에, 그 관련 기술들에 관심을 가지고 있습니다.</p>
+                            </div>
+                        </div>
+                        <div style = "height : 255px">
+                            <canvas id = "SkillCanvas2" style = "border : 1px solid black; display : inline-block; border-radius: 20px; vertical-align: top;" width = "250" height = "250"></canvas>
+                            <div style = "border : 1px solid black; width : 600px; height : 250px; display : inline-block; border-radius: 20px; vertical-align: top;">
+                                <br>
+                                <a style = "font-size : 40px";>파이썬</a>
+                                <p style = "font-size : 30px";>여러 보안 관련 기업의 채용 공고 확인 결과, 가장 많이 보이는 우대 사항 중 하나이기에, 관심을 가지고 있습니다.</p>
+                            </div>
+                        </div>
+                        <div style = "height : 255px">
+                            <canvas id = "SkillCanvas3" style = "border : 1px solid black; display : inline-block; border-radius: 20px; vertical-align: top;" width = "250" height = "250"></canvas>
+                            <div style = "border : 1px solid black; width : 600px; height : 250px; display : inline-block; border-radius: 20px; vertical-align: top;">
+                                <br>
+                                <a style = "font-size : 40px";>SQL</a>
+                                <p style = "font-size : 30px";>여러 보안 관련 기업의 채용 공고 확인 결과, 가장 많이 보이는 우대 사항 중 하나이기에, 관심을 가지고 있습니다.</p>
+                            </div>
+                        </div>
+                        <div style = "height : 255px">
+                            <canvas id = "SkillCanvas4" style = "border : 1px solid black; display : inline-block; border-radius: 20px; vertical-align: top;" width = "250" height = "250"></canvas>
+                            <div style = "border : 1px solid black; width : 600px; height : 250px; display : inline-block; border-radius: 20px; vertical-align: top;">
+                                <br>
+                                <a style = "font-size : 40px";>Linux</a>
+                                <p style = "font-size : 30px";>여러 보안 관련 기업의 채용 공고 확인 결과, 가장 많이 보이는 우대 사항 중 하나이기에, 관심을 가지고 있습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style = "width : 900px; text-align : center; display : inline-block; vertical-align: top;" >
+                        <div style = "text-align : center;">
+                            <h1 style = "font-size : 60px">관련 기업</h1>
+                        </div>
+                        <div style = "height : 255px">
+                            <canvas id = "CorporationCanvas1" style = "border : 1px solid black; display : inline-block; vertical-align: top; border-radius: 20px;" width = "250" height = "250"></canvas>
+                            <div style = "border : 1px solid black; width : 600px; height : 250px; display : inline-block; border-radius: 20px; vertical-align: top;">
+                                <br>
+                                <a href = "https://www.ahnlab.com/ko" target="_blank" class = "Corporation">안랩</a>
+                                <p style = "font-size : 30px;">진로를 정보보안으로 정하게 해준 기업이자, 백신 V3를 개발한 기업으로 유명하다</p>
+                            </div>
+                        </div>
+                        <div style = "height : 255px">
+                            <canvas id = "CorporationCanvas2" style = "border : 1px solid black; display : inline-block; border-radius: 20px; vertical-align: top;" width = "250" height = "250"></canvas>
+                            <div style = "border : 1px solid black; width : 600px; height : 250px; display : inline-block; border-radius: 20px; vertical-align: top;">
+                                <br>
+                                <a href = "https://www.secui.com/" target="_blank" class = "Corporation">시큐아이</a>
+                                <p style = "font-size : 30px;">국내 보안 회사중 큰 규모의 기업 중 하나로, 삼성그룹 삼성SDS의 자회사이다.</p>
+                            </div>
+                        </div>
+                        <div style = "height : 255px">
+                            <canvas id = "CorporationCanvas3" style = "border : 1px solid black; display : inline-block; border-radius: 20px; vertical-align: top;" width = "250" height = "250"></canvas>
+                            <div style = "border : 1px solid black; width : 600px; height : 250px; display : inline-block; border-radius: 20px; vertical-align: top;">
+                                <br>
+                                <a href = "https://pnpsecure.com/" target="_blank" class = "Corporation">피앤피시큐어</a>
+                                <p style = "font-size : 30px;">국내 DB 시장에서 높은 인지도의 기업으로, DBSAFER를 개발한 기업이다.</p>
+                            </div>
+                        </div>
+                        <div style = "height : 255px">
+                            <canvas id = "CorporationCanvas4" style = "border : 1px solid black; display : inline-block; border-radius: 20px; vertical-align: top;" width = "250" height = "250"></canvas>
+                            <div style = "border : 1px solid black; width : 600px; height : 250px; display : inline-block; border-radius: 20px; vertical-align: top;">
+                                <br>
+                                <a href = "https://www.estsecurity.com/" target="_blank" class = "Corporation">이스트시큐리티</a>
+                                <p style = "font-size : 30px;">국내 보안 회사중 큰 규모의 기업 중 하나로, 백신 알약을 개발한 기업이다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    `;
+                }
+
+                var images = [
+                    { canvasId: "SkillCanvas1", src: "https://www.lgcns.com/wp-content/uploads/2021/11/99FC7C375CCBD7CD1B-1.png" },
+                    { canvasId: "SkillCanvas2", src: "https://mblogthumb-phinf.pstatic.net/MjAxNzAyMTNfMjEg/MDAxNDg2OTcxNzM3NTE5.FKqf5HaO1eoFhgXkGE2jXVKKQ-jVdwXho4N8cIU6L-Ig.KOSZAUeaSF3L8rh1kjDgoQUDuFg5pEX6EsZKJ4lmASEg.JPEG.acornedu/01_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%96%B8%EC%96%B4.jpg?type=w800" },
+                    { canvasId: "SkillCanvas3", src: "https://www.ibm.com/content/dam/adobe-cms/instana/media_logo/Azure-SQL-Database-Monitoring.component.complex-narrative-xl.ts=1692275972152.png/content/adobe-cms/kr/ko/products/instana/supported-technologies/azure-sql-database-monitoring/_jcr_content/root/table_of_contents/body/content_section_styled/content-section-body/complex_narrative/logoimage" },
+                    { canvasId: "SkillCanvas4", src: "https://blogcodestates.com/wp-content/uploads/2022/12/%EB%A6%AC%EB%88%85%EC%8A%A4-%EA%B8%B0%EB%B3%B8-%EB%AA%85%EB%A0%B9%EC%96%B4.-%EB%AA%A8%EC%9D%8C.png?fit=900%2C675&ssl=1" },
+                    { canvasId: "CorporationCanvas1", src: "https://www.dailysecu.com/news/photo/202211/141615_166164_1028.jpg" },
+                    { canvasId: "CorporationCanvas2", src: "https://www.secui.com/data/file/2/1657258919.BEDNC.JPG" },
+                    { canvasId: "CorporationCanvas3", src: "https://i.namu.wiki/i/B36PD8jjPF0ufQ9Lb64gBDbEyZOYmimzw83MyCneN0sq2Hk64lqhSKUYL6xH0hg5iEAbV581LQuD6psEUZDrRA.webp" },
+                    { canvasId: "CorporationCanvas4", src: "https://pds.saramin.co.kr/company/logo/202303/08/rr6zfg_wmyb-xraeoh_logo.PNG" }
+                ];
+
+                    images.forEach(image => {
+                    var canvas = document.getElementById(image.canvasId);
+                    var context = canvas.getContext("2d");
+                    var img = new Image();
+                    img.onload = function() {
+                        context.drawImage(img, 0, 0, canvas.width, canvas.height);
+                    }
+                    img.src = image.src;
+            });
+
+            }
+
+            function loadplan() {
+                var newsection = document.getElementsByTagName('section');
+                for(var i = 0; i<newsection.length; i++) {
+                    newsection[i].innerHTML = `
+                        <br>
+                        <h1 style="text-align: center; font-size : 40px">미래 계획</h1>
+                        <div style="display : flex; margin-top: 50px; justify-content: space-around">
+                            <div class="plan">
+                                <h2>3학년 2학기 시작 전</h2>
+                                <ul>
+                                    <li>높은 파이썬 이해도를 위한 파이썬 복습</li>
+                                    <li>높은 C언어 이해도를 위한 C언어 복습</li>
+                                    <li>높은 SQL 이해도를 위한 SQL 복습</li>
+                                    <li>컴퓨터활용능력 1급 취득</li>
+                                </ul>
+                            </div>
+                            <div class="plan">
+                                <h2>3학년 2학기</h2>
+                                <ul>
+                                    <li>리눅스 수업을 들으며, 리눅스 마스터 준비</li>
+                                    <li>DB프로그래밍 수업을 들으며, SQL자격증 준비</li>
+                                    <li>종강 후 위 2개의 자격증 취득</li>
+                                </ul>
+                            </div>
+                            <div class="plan">
+                                <h2>4학년 1학기</h2>
+                                <ul>
+                                    <li>졸업 겸 취업을 위한 정보처리기사 준비</li>
+                                    <li>종강 후 정보처리기사 자격증 취득</li>
+                                </ul>
+                            </div>
+                            <div class="plan">
+                                <h2>4학년 2학기</h2>
+                                <ul>
+                                    <li>취업을 위한 토익 공부 시작</li>
+                                    <li>종강 후 토익 시험 응시</li>
+                                </ul>
+                            </div>
+                            <div class="plan">
+                                <h2>졸업 후</h2>
+                                <ul>
+                                    <li>여러 보안 관련 기업 채용공고 확인</li>
+                                    <li>채용 조건이 맞는곳에 입사진원서 접수</li>
+                                    <li>틈틈히 정보보안기사 공부</li>
+                                    <li>공부한 내용으로 정보보안기사 자격증 취득</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style = "background-color : darkgray; color : white; height : 300px; border-radius: 50px;">
+                            <br>
+                            <p style = "font-size : 55px;  text-align : center;">"성공은 사전 준비에 달려있으며, 그러한 준비 없이는 반드시 실패할 것이다."</p>
+                            <p style = "font-size : 55px;  text-align : right; margin-right : 20px;">-공자-</p>
+                        </div>
+                    `;}
+            }
+                    
+
+
+        </script>
+        <title>202001846 황정철 웹 프로그래밍 과제</title>
+    </head>
+    <body>
+        <h3></h3>
+        <header class="header">
+            <br>
+            <nav>
+                <ul class="link">
+                    <li><a onclick="window.location.reload();">초기화면</a></li>
+                    <li><a onclick="loadintroduce()">본인 소개</a></li>
+                    <li><a onclick="loadinterested()">관련 기술 및 기업</a></li>
+                    <li><a onclick="loadplan()">공부 계획 및 취업 준비</a></li>
+                </ul>
+            </nav>
+            <br>
+        </header>
+        <section id = "firstsection">
+        <div class = "firstdiv">
+            <button onclick="loadintroduce()" class = "firstbutton">
+                <div class="inline">
+                <h1 style = "font-size : 55px">황정철 그는 누구인가?</h1>
+                </div>
+                <div class="inline">
+                    <ul style = "text-align: left;">
+                        <li><p style = "font-size : 20px">나는 과제의 주제를 왜 이렇게 설정하였는가?</p></li>
+                        <li><p style = "font-size : 20px">나는 무엇을 목표로 살고있는가?</p></li>
+                        <li><p style = "font-size : 20px">나는 어떠한 삶을 살았는가?</p></li>
+                        <li><p style = "font-size : 20px">나는 최근 사회이슈에 대해 어떻게 생각하는가?</p></li>
+                        <li><p style = "font-size : 20px">나는 이번 프로젝트를 하면서 무엇이 어려웠고 어떻게 해결했는가?</p></li>
+                        <li><p style = "font-size : 20px">나는 무엇을 할 수 있는가?</p></li>
+                </ul>
+                </div>
+            </button>
+        </div>
+        <div class = "firstdiv">
+            <button onclick="loadinterested()" class = "firstbutton">
+                <div class="inline">
+                    <h1 style = "font-size : 55px">무엇을 배우고 어디에 갈것인가?</h1>
+                    </div>
+                    <div class="inline">
+                        <ul style = "text-align: left;">
+                            <li><p style = "font-size : 20px">나는 무엇을 배우고 싶은가?</p></li>
+                            <li><p style = "font-size : 20px">나는 과연 어느 기업에 가고 싶은가?</p></li>
+                    </ul>
+                    </div>
+            </button>
+        </div>
+        <div class = "firstdiv">
+            <button onclick="loadplan()" class = "firstbutton">
+                <div class="inline">
+                    <h1 style = "font-size : 55px">어떻게 원하는 것을 이룰 것인가?</h1>
+                    </div>
+                    <div class="inline">
+                        <ul style = "text-align: left;">
+                            <li><p style = "font-size : 20px">관심있는 기술을 어떻게 공부할 것인가?</p></li>
+                            <li><p style = "font-size : 20px">취업을 어떻게 준비할 것인가?</p></li>
+                    </ul>
+                    </div>
+            </button>
+        </div>
+        </section>
+        <script>
+        </script>
+    </body>
+</html>
